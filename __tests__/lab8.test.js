@@ -29,12 +29,17 @@ describe('Basic user flow for SPA ', () => {
 
   it('Test3: Clicking first <journal-entry>, new URL should contain /#entry1', async () => {
     // implement test3: Clicking on the first journal entry should update the URL to contain “/#entry1”
-
+    await page.click('journal-entry');
+    const pageURL = await page.url();
+    let hasStr = pageURL.includes("/#entry1");
+    expect(hasStr).toBe(true);
   });
 
   it('Test4: On first Entry page - checking page header title', async () => {
     // implement test4: Clicking on the first journal entry should update the header text to “Entry 1” 
-
+    await page.click('journal-entry');
+    const title = page.$('header > h1');
+    expect(title).toBe("Entry 1");
   });
 
   it('Test5: On first Entry page - checking <entry-page> contents', async () => {

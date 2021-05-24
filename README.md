@@ -17,5 +17,9 @@ Yes. We can test this since this is just one small part of the program that does
 
 4. What do you expect to happen if we run our puppeteer tests with the field “headless” set to true?
 
+We will not have graphical user interface. For example, you can't hover your mouse and click on setting icon to go to icon page. Instead, we have to use CLI.
+
 5. What would your beforeAll callback look like if you wanted to start from the settings page before every test case?
+
+
 
